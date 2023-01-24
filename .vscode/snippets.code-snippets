@@ -1,0 +1,14 @@
+{
+  "Import database": {
+    "scope": "javascript,typescript",
+    "prefix": "db",
+    "body": ["import db from \"database\";"],
+    "description": "imports database"
+  },
+  "Import ApiError": {
+    "scope": "javascript,typescript",
+    "prefix": "apiError",
+    "body": ["import ApiError from \"helper/functions/ApiError\";"],
+    "description": "imports ApiError"
+  }
+}

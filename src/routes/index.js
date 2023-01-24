@@ -1,10 +1,10 @@
 import express from "express";
-import getMathRoutes from "./admin/router";
+import getCommonRoutes from "./common/router";
 
 function getRoutes() {
   const router = express.Router();
 
-  router.use("/admins", getMathRoutes());
+  router.use("", getCommonRoutes());
 
   return router;
 }

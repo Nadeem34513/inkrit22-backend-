@@ -11,8 +11,8 @@
  */
 
 module.exports = (sequelize, DataTypes) => {
-  const admin = sequelize.define(
-    "admin",
+  const users = sequelize.define(
+    "users",
 
     {
       id: {
@@ -29,20 +29,36 @@ module.exports = (sequelize, DataTypes) => {
       email: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
       },
-      password: {
+      phone_no: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      college: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      course: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      year: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      screen_shot: {
         type: DataTypes.STRING,
         allowNull: false,
       },
     },
     {
       freezeTableName: true,
-      tableName: "admin",
+      tableName: "Users",
+      underscored: true,
     },
   );
-  admin.associate = function () {
+  users.associate = function () {
     // associations can be defined here
   };
-  return admin;
+  return users;
 };
